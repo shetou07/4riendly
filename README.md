@@ -1,100 +1,67 @@
-# Welcome to React Router!
+# 4riendly App
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Introduction
+4riendly is a decentralized web application that allows users to place bets on basketball and football pick-up games with their friends. The platform leverages the Solana blockchain to ensure secure, transparent, and automated payouts using smart contracts.
 
 ## Features
+- Peer-to-peer betting for basketball and football games
+- Solana blockchain integration for fast and low-cost transactions
+- Secure and automated payouts via smart contracts
+- User-friendly React-based interface
+- Wallet connection for seamless crypto transactions
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Tech Stack
+- **Frontend:** React, Vite
+- **Backend:** Node.js (if applicable)
+- **Blockchain:** Solana, Solana Playground
+- **Smart Contracts:** Rust (Solana programs)
+- **CI/CD:** GitLab
 
-## Getting Started
+## Installation
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js** (latest LTS version)
+- **Yarn** or **npm**
+- **Solana CLI**
+- **Phantom Wallet** (or any Solana-compatible wallet)
 
-### Installation
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone <repository_url>
+   cd 4riendly
+   ```
+2. Install dependencies:
+   ```sh
+   npm install  # or yarn install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev  # or yarn dev
+   ```
+4. Open your browser and go to `http://localhost:3000`.
 
-Install the dependencies:
+## Smart Contract Deployment
+1. Set up Solana CLI:
+   ```sh
+   solana config set --url devnet
+   ```
+2. Build and deploy the smart contract:
+   ```sh
+   anchor build
+   anchor deploy
+   ```
+3. Update the contract address in the frontend configuration.
 
-```bash
-npm install
-```
+## Usage
+- Connect your wallet.
+- Create or join a betting pool.
+- Confirm the bet with your friend.
+- Once the game is over, the winner is declared, and the funds are automatically transferred.
 
-### Development
+## Contribution
+Feel free to open an issue or submit a pull request if you'd like to contribute.
 
-Start the development server with HMR:
+## License
+This project is licensed under the MIT License.
 
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-This template includes three Dockerfiles optimized for different package managers:
-
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
-
-To build and run using Docker:
-
-```bash
-# For npm
-docker build -t my-app .
-
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
-
-# For bun
-docker build -f Dockerfile.bun -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
