@@ -12,7 +12,7 @@
 
 ## Tech Stack
 - **Frontend:** React, Vite
-- **Backend:** Node.js (if applicable)
+- **Backend:** Node.js
 - **Blockchain:** Solana, Solana Playground
 - **Smart Contracts:** Rust (Solana programs)
 - **CI/CD:** GitLab
